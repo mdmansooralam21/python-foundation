@@ -100,4 +100,24 @@ else:
     new_salary=((int(hike_percentage)/100)*current_salary_jl5) + current_salary_jl5
     print("The updated salary after hike is: ", new_salary)
 
+---------------------------------------------------------------------------------------------------
+
+#Write a Python function factorial(num) which return the factorial of a given number 
+
+def factorial(num):
+    if num>=0:
+        product=1
+        for i in range (1, num+1):
+            product*=i
+        
+        return product
+
+num=int(input("Enter the number to find its factorial "))
+
+if factorial(num):
+    print(f"The factorial of {num} is {factorial(num)}") 
+
+else:
+    print("Invalid value entered!! Please enter a whole number")
+
 """
