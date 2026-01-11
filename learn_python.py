@@ -184,6 +184,42 @@ if check_amicable_numbers(num1, num2):
 else:
     print("Not Amicable Numbers")
 
+--------------------------------------------------------------------------------------------------------------
+
+#Write a Python function check_strong_number(num) that accepts a positive integer as argument and return True if the number is strong number
+#else false. Invoke the function and based on return value, print the number is strong number or not. 
+
+def check_strong_number(num):
+    if num>0:      
+        sum=0
+        temp_num=num
+
+        while temp_num%10>0:
+            remainder=temp_num%10
+            product=1
+
+            for i in range (1, remainder+1):
+             product*=i
+             
+            temp_num=temp_num//10     
+            sum+=product 
+        
+        if sum==num:
+           return True
+        
+        else:
+           return False
+    else:
+       print("Invalid Value!! Please enter a postive number")
+    
+num=int(input("Enter a number to check if it's a Strong Number or not: "))
+
+if check_strong_number(num):
+   print("Strong Number")
+
+else:
+   print("Not a Strong Number")
+
 """
 
 #Write a ython function right_shift(num, n) that takes two numbers num and n as arguments and returns value of the integer num rotated to the right by n positions.
@@ -191,8 +227,3 @@ else:
 
 #Hint: Use >> binary operators to shift the bits
 #Example - num=60, n=2, output=15
-
-#Write a Python function check_strong_number(num) that accepts a positive integer as argument and return True if the number is strong number
-#else false. Invoke the function and based on return value, print the number is strong number or not. 
-
-#Hint: A number is said to be strong number, if the sum of factorial of each digit of the number is equal to the given number. 
