@@ -102,7 +102,7 @@ else:
 
 ---------------------------------------------------------------------------------------------------
 
-#Write a Python function factorial(num) which return the factorial of a given number 
+#Write a Python Function factorial(num) which return the factorial of a given number 
 
 def factorial(num):
     if num>=0:
@@ -120,4 +120,79 @@ if factorial(num):
 else:
     print("Invalid value entered!! Please enter a whole number")
 
+--------------------------------------------------------------------------------------------------
+
+#Write a Python Function is_palindrome(num) that accepts an integer num as argument and returns True if the num is palindrome 
+#else returns false. Invoke the function and based on return value, print the output. 
+
+def is_palindrome(num):
+    rev_num=0
+    temp_num=num
+    while temp_num>0:
+        rem=temp_num%10
+        rev_num=(rev_num*10)+rem
+        temp_num=temp_num//10
+    
+    if rev_num==num:
+        return True
+
+    else:
+        return False
+
+num=int(input("Enter the number to check if the integer is a palindrome or not: "))
+
+if is_palindrome(num):
+    print("Palindrome Number")
+
+else:
+    print("Not a Palindrome Number")
+
+--------------------------------------------------------------------------------------------------
+
+#Write a Python function check_amicable_numbers(num1, num2) that accepts two numbers num1 and num2 as arguments and returns True if the given pair of 
+#numbers are amicable numbers else return false. Invoke the function and based on return value, print the numbers are amicable numbers or not. 
+
+#num1 and num2 are said to tbe amicable numbers if sum of all the proper divisors (except num1 itself) of num1 is equal to num and sum of all the proper
+#divisors of num2 (except num2 itself) is equal to num1. 
+
+def check_amicable_numbers(num1, num2):
+    sum1=0
+    sum2=0
+
+    if num1>0 and num2>0: 
+        for div1 in range (1, num1):
+            if num1%div1==0:
+                sum1+=div1
+        
+        for div2 in range (1, num2):
+            if num2%div2==0:
+                sum2+=div2
+            
+        if (sum1==num2) and (sum2==num1):
+            return True
+        
+        else:
+            return False
+
+print("Enter the two numbers to check if the numbers are Amicable Numbers or not\n")
+num1=int(input("Enter the first number: "))
+num2=int(input("Enter the second number: "))
+
+if check_amicable_numbers(num1, num2):
+    print("Amicable Numbers")
+
+else:
+    print("Not Amicable Numbers")
+
 """
+
+#Write a ython function right_shift(num, n) that takes two numbers num and n as arguments and returns value of the integer num rotated to the right by n positions.
+#Assume both the numbers are unsigned. Invoke the function and print the return value. 
+
+#Hint: Use >> binary operators to shift the bits
+#Example - num=60, n=2, output=15
+
+#Write a Python function check_strong_number(num) that accepts a positive integer as argument and return True if the number is strong number
+#else false. Invoke the function and based on return value, print the number is strong number or not. 
+
+#Hint: A number is said to be strong number, if the sum of factorial of each digit of the number is equal to the given number. 
