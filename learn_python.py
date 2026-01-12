@@ -1,5 +1,3 @@
-"""
-
 #Write a python program to check whether the given year is a leap year or not 
 
 year=int(input("Enter the year to check if it is a leap year or not: "))
@@ -9,8 +7,6 @@ if (year%4==0 and year%100!=0) or (year%400==0 and year%100==0):
 
 else:
     print("Not a Leap Year")
-
-----------------------------------------------------------------------------------------------------
 
 #Write a python program to find and display the maximum of three given numbers
 
@@ -29,9 +25,6 @@ elif (first_number==second_number==third_number):
 
 else:
     print(f"The leargest number is {third_number}")
-
-
---------------------------------------------------------------------------------------------------------
 
 #Write a python program to print the first n Fibonacci Numbers
 
@@ -57,10 +50,7 @@ elif num>2:
         n1=n2
         n2=n3
 
---------------------------------------------------------------------------------------------------------------
-
 '''
-
 An organization has decided to provide salary hike to its employees based on their job level. Employees can be in job levels 3, 4 or 5. 
 In case of invalid job level, consider hike percentage to be 0. Given the current salary and job level, write a python program to find 
 and display the new salary of an employee. 
@@ -98,8 +88,6 @@ else:
     new_salary=((int(hike_percentage)/100)*current_salary_jl5) + current_salary_jl5
     print("The updated salary after hike is: ", new_salary)
 
----------------------------------------------------------------------------------------------------
-
 #Write a Python Function factorial(num) which return the factorial of a given number 
 
 def factorial(num):
@@ -117,8 +105,6 @@ if factorial(num):
 
 else:
     print("Invalid value entered!! Please enter a whole number")
-
---------------------------------------------------------------------------------------------------
 
 #Write a Python Function is_palindrome(num) that accepts an integer num as argument and returns True if the num is palindrome 
 #else returns false. Invoke the function and based on return value, print the output. 
@@ -144,8 +130,6 @@ if is_palindrome(num):
 
 else:
     print("Not a Palindrome Number")
-
---------------------------------------------------------------------------------------------------
 
 #Write a Python function check_amicable_numbers(num1, num2) that accepts two numbers num1 and num2 as arguments and returns True if the given pair of 
 #numbers are amicable numbers else return false. Invoke the function and based on return value, print the numbers are amicable numbers or not. 
@@ -182,8 +166,6 @@ if check_amicable_numbers(num1, num2):
 else:
     print("Not Amicable Numbers")
 
---------------------------------------------------------------------------------------------------------------
-
 #Write a Python function check_strong_number(num) that accepts a positive integer as argument and return True if the number is strong number
 #else false. Invoke the function and based on return value, print the number is strong number or not. 
 
@@ -217,8 +199,6 @@ if check_strong_number(num):
 
 else:
    print("Not a Strong Number")
-
-"""
 
 #Write a Python function right_shift(num, n) that takes two numbers num and n as arguments and returns value of the integer num 
 #rotated to the right by n positions. Assume both the numbers are unsigned. Invoke the function and print the return value. 
