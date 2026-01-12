@@ -57,8 +57,6 @@ elif num>2:
         n1=n2
         n2=n3
 
-
-
 --------------------------------------------------------------------------------------------------------------
 
 '''
@@ -222,8 +220,18 @@ else:
 
 """
 
-#Write a ython function right_shift(num, n) that takes two numbers num and n as arguments and returns value of the integer num rotated to the right by n positions.
-#Assume both the numbers are unsigned. Invoke the function and print the return value. 
+#Write a Python function right_shift(num, n) that takes two numbers num and n as arguments and returns value of the integer num 
+#rotated to the right by n positions. Assume both the numbers are unsigned. Invoke the function and print the return value. 
 
 #Hint: Use >> binary operators to shift the bits
 #Example - num=60, n=2, output=15
+
+INT_BITS=32
+def right_shift(num, n):
+    return (num >> n)
+
+num = int(input("Enter a number: "))
+n = int(input("Enter the number of positions to rotate: "))
+
+result = right_shift(num, n)
+print("The result of the rotation is:", result)
