@@ -215,3 +215,86 @@ n = int(input("Enter the number of positions to rotate: "))
 
 result = right_shift(num, n)
 print("The result of the rotation is:", result)
+
+
+#Write a Python Function proper_divisors(num) which returns a list of all the proper divisors of given number. 
+
+def proper_divisors(num):
+    if num>0:
+        divisor_list=[]
+        for i in range (1, num):
+            if num%i==0:
+                divisor_list.append(i)
+            
+            else:
+                continue
+
+        return divisor_list
+
+num=int(input("Enter the number to get a list of all proper divisior: "))
+print(f"The below is the list of all proper divisors of {num}")
+print(proper_divisors(num))
+
+#Write a Python Function generate_fibonacci(n) to return a list of first n Fibonacci numbers. 
+
+def generate_fibonacci(n):
+    num1=0
+    num2=1
+    fibonacci_list=[]
+
+    if n<=0:
+        print("Invalid number entered!! Please enter a valid number i.e. A Natural Number")
+    
+    if n==1:
+        fibonacci_list.append(num1)
+    
+    if n==2:
+        fibonacci_list.append(num1)
+        fibonacci_list.append(num2)
+
+    if n>2:
+        fibonacci_list.append(num1)
+        fibonacci_list.append(num2)
+
+        for i in range (1, n-1):
+            num3=num1+num2
+            fibonacci_list.append(num3)
+            num1=num2
+            num2=num3
+
+    return fibonacci_list
+
+n=int(input("Enter the number of Fibonacci Numbers to be generated: "))
+print(f"The below is the list of {n} Fibonacci Numbers")
+print(generate_fibonacci(n))
+
+#Write a Python program to generate the next 15 leap years starting from a given year. Populate the leap years into a list and display the list. 
+
+def generate_leap_year(year):
+    year_list=[]
+
+    while len(year_list) < 16:
+        if (year%4==0 and year%100!=0) or (year%100==0 and year%400==0):
+            year_list.append(year)  
+
+        year+=1
+          
+    return year_list
+    
+year=int(input("Enter the year to generate next 15 years: "))
+print(f"The below is the list of 15 leap years starting from {year}")
+print(generate_leap_year(year))
+
+#Write a Python program to generate the ticket numbers for specified number of passengers traveling in a flight as per the details mentioned below:
+#The ticket number should be generated as airline:src:dest:number where
+#AL1 --> airline, src and dest should be the first three characters of the source and destination cities. number should be auto generated starting from 101. 
+#The program should return the list of ticket numbers of last five passengers. If passenger count is less than 5, return the list of all generated ticket numbers. 
+
+
+
+
+
+#Given alist of integer values, write a Pyhton program to check whether the list contains the same number in adjacent poitions. Display the count of such adjacent occurrences. 
+#[1,1,5.100,-20,-20,6,0,0]
+#[10,20,30,40,30,20]
+# [1,2,2,3,4,4,4,10]  
