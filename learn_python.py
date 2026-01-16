@@ -285,16 +285,26 @@ year=int(input("Enter the year to generate next 15 years: "))
 print(f"The below is the list of 15 leap years starting from {year}")
 print(generate_leap_year(year))
 
+#Given a list of integer values, write a Pyhton program to check whether the list contains the same number in adjacent poitions. 
+#Display the count of such adjacent occurrences. 
+#[1,1,5.100,-20,-20,6,0,0]
+#[10,20,30,40,30,20]
+#[1,2,2,3,4,4,4,10]
+
+given_list=[1,2,2,3,4,4,4,10]
+
+
+def adjacent_occurences(given_list):
+    count=0
+    for i in range (1, len(given_list)):
+        if given_list[i]==given_list[i-1]:
+            count+=1
+
+    return count
+    
+print(f"The number of occurences is {adjacent_occurences(given_list)}")
+
 #Write a Python program to generate the ticket numbers for specified number of passengers traveling in a flight as per the details mentioned below:
 #The ticket number should be generated as airline:src:dest:number where
 #AL1 --> airline, src and dest should be the first three characters of the source and destination cities. number should be auto generated starting from 101. 
 #The program should return the list of ticket numbers of last five passengers. If passenger count is less than 5, return the list of all generated ticket numbers. 
-
-
-
-
-
-#Given alist of integer values, write a Pyhton program to check whether the list contains the same number in adjacent poitions. Display the count of such adjacent occurrences. 
-#[1,1,5.100,-20,-20,6,0,0]
-#[10,20,30,40,30,20]
-# [1,2,2,3,4,4,4,10]  
