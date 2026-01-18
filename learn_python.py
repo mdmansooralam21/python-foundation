@@ -293,7 +293,6 @@ print(generate_leap_year(year))
 
 given_list=[1,2,2,3,4,4,4,10]
 
-
 def adjacent_occurences(given_list):
     count=0
     for i in range (1, len(given_list)):
@@ -308,3 +307,41 @@ print(f"The number of occurences is {adjacent_occurences(given_list)}")
 #The ticket number should be generated as airline:src:dest:number where
 #AL1 --> airline, src and dest should be the first three characters of the source and destination cities. number should be auto generated starting from 101. 
 #The program should return the list of ticket numbers of last five passengers. If passenger count is less than 5, return the list of all generated ticket numbers. 
+
+import random
+
+airline="AL1"
+src=(input("Enter the source city: ").upper())[0:3]
+dest=(input("Enter the destination city: ").upper())[0:3]
+
+def generate_ticket(num_of_passenger):
+    generated_ticket=[]
+    
+    for i in range (1, num_of_passenger+1):
+        inital_ticket=airline + ":" + src + ":" + dest + ":"
+        number=str(random.randint(101, 999))
+        final_ticket=inital_ticket + number
+        generated_ticket.append(final_ticket)
+    
+    return generated_ticket
+
+num_of_passenger=int(input("Enter the number of passengers to generate ticket: "))
+generated_ticket=generate_ticket(num_of_passenger)
+
+if num_of_passenger<0:
+    print("Invalid value entered!!")
+
+if (num_of_passenger>=0) and  (num_of_passenger<=5):
+    final_list='\n'.join(generated_ticket)
+    print("Below is the list of generated ticke: \n")
+    print(final_list)
+    print("\n")
+
+if num_of_passenger>5:
+    final_list='\n'.join(generated_ticket[-5:])
+    print("Below is the list of generated ticke: \n")
+    print(final_list)
+    print("\n")
+    
+    
+
